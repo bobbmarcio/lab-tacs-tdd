@@ -2,9 +2,9 @@ package com.example.demo;
 
 public class Lance {
     private Usuario usuario;
-    private Double valor;
+    private double valor;
 
-    public Lance(Usuario usuario, Double valor) {
+    public Lance(Usuario usuario, double valor) {
         this.usuario = usuario;
         this.valor = valor;
     }
@@ -13,7 +13,7 @@ public class Lance {
         return usuario;
     }
 
-    public Double getValor() {
+    public double getValor() {
         return valor;
     }
 }

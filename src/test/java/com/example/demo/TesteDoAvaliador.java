@@ -1,8 +1,12 @@
 package com.example.demo;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class TesteDoAvaliador {
 
-    public static void main(String[] args){
+    @Test
+    public void deveEntenderLancesEmOrdemCrescente(){
         Usuario joao = new Usuario("João");
         Usuario jose = new Usuario("José");
         Usuario maria = new Usuario("Maria");
@@ -16,7 +20,10 @@ public class TesteDoAvaliador {
 
         leiloeiro.avalia(leilao);
 
-        System.out.println(leiloeiro.getMaiorLance());
-        System.out.println(leiloeiro.getMenorLance());
+        double maiorEsperado = 400;
+        double menorEsperado = 250;
+
+        Assert.assertEquals(maiorEsperado, leiloeiro.getMaiorLance(), 0.00001);
+        Assert.assertEquals(menorEsperado, leiloeiro.getMenorLance(), 0.00001);
     }
 }
